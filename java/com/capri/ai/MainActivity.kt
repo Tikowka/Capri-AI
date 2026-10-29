@@ -38,8 +38,15 @@ class MainActivity : Activity(), TextToSpeech.OnInitListener {
     private val VOICE_REQ_CODE = 101
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        tts = TextToSpeech(this, this)
+    super.onCreate(savedInstanceState)
+    
+    window.setFlags(
+        android.view.WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
+        android.view.WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN
+    )
+
+    tts = TextToSpeech(this, this)
+
 
         val root = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
