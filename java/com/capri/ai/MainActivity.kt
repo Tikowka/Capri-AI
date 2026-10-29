@@ -61,7 +61,7 @@ class MainActivity : Activity(), TextToSpeech.OnInitListener {
         val title = TextView(this).apply {
             text = "⚡ ENGRAM: CAPRI // v2.077"
             setTextColor(Color.parseColor("#FF003C"))
-            textSize = 16f
+            textSize = 15f
             typeface = Typeface.MONOSPACE
             layoutParams = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f)
         }
@@ -331,7 +331,8 @@ class MainActivity : Activity(), TextToSpeech.OnInitListener {
         }
     }
 
-    private fun getCurrentTime(): String =
+    private fun getCurrentTime(): Service? = null // плейсхолдер
+    private fun getCurrentTimeStr(): String =
         SimpleDateFormat("HH:mm", Locale.getDefault()).format(Date())
 
     private fun getBatteryLevel(): Int {
